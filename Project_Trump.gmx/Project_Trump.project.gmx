@@ -4,19 +4,60 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\snd_gotmail</sound>
+  </sounds>
   <sprites name="sprites">
-    <sprite>sprites\spr_donald_still</sprite>
-    <sprite>sprites\spr_donald_ani</sprite>
-    <sprite>sprites\spr_emails</sprite>
-    <sprite>sprites\spr_wall</sprite>
+    <sprites name="Characters">
+      <sprite>sprites\spr_donald_still</sprite>
+      <sprite>sprites\spr_donald_ani</sprite>
+      <sprite>sprites\spr_enemy_donkey</sprite>
+      <sprite>sprites\spr_hillary_p0</sprite>
+      <sprite>sprites\spr_hillary_1</sprite>
+      <sprite>sprites\spr_donald_attack</sprite>
+      <sprite>sprites\spr_new_enemy</sprite>
+      <sprite>sprites\spr_generic_enemy</sprite>
+      <sprite>sprites\spr_enemy_ground</sprite>
+    </sprites>
+    <sprites name="Objects">
+      <sprite>sprites\spr_emails</sprite>
+      <sprite>sprites\spr_wall</sprite>
+      <sprite>sprites\spr_menu_arrow</sprite>
+      <sprite>sprites\spr_blood_splat</sprite>
+      <sprite>sprites\spr_flash</sprite>
+      <sprite>sprites\spr_weapon</sprite>
+      <sprite>sprites\spr_power_up</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\scr_set_def_text.gml</script>
+    <script>scripts\scr_add_points.gml</script>
+    <script>scripts\scr_damage_check.gml</script>
+    <script>scripts\scr_menu.gml</script>
+    <script>scripts\scr_pause_menu.gml</script>
+    <script>scripts\scr_check_spawn.gml</script>
+  </scripts>
+  <fonts name="fonts">
+    <font>fonts\fnt_default</font>
+  </fonts>
   <objects name="objects">
-    <object>objects\obj_donald</object>
-    <object>objects\obj_emails</object>
-    <object>objects\obj_wall</object>
+    <objects name="Characters">
+      <object>objects\obj_donald</object>
+      <object>objects\obj_par_enemy</object>
+      <object>objects\obj_enemy_donkey</object>
+    </objects>
+    <objects name="Objects">
+      <object>objects\obj_emails</object>
+      <object>objects\obj_wall</object>
+      <object>objects\obj_menu</object>
+      <object>objects\obj_pause_menu</object>
+    </objects>
+    <objects name="Controllers">
+      <object>objects\obj_points</object>
+      <object>objects\obj_spawner</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
