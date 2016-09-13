@@ -6,14 +6,18 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\Donald_spr_still</sprite>
-    <sprite>sprites\Donald_spr_ani</sprite>
-    <sprite>sprites\Lost_Emails</sprite>
-    <sprite>sprites\Ground</sprite>
+    <sprite>sprites\spr_donald_still</sprite>
+    <sprite>sprites\spr_donald_ani</sprite>
+    <sprite>sprites\spr_emails</sprite>
+    <sprite>sprites\spr_wall</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
-  <objects name="objects"/>
+  <objects name="objects">
+    <object>objects\Donald_obj_still</object>
+    <object>objects\obj_emails</object>
+    <object>objects\obj_wall</object>
+  </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
   </rooms>
