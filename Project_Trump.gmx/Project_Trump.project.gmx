@@ -14,7 +14,7 @@
   <backgrounds name="background"/>
   <paths name="paths"/>
   <objects name="objects">
-    <object>objects\Donald_obj_still</object>
+    <object>objects\obj_donald</object>
     <object>objects\obj_emails</object>
     <object>objects\obj_wall</object>
   </objects>
