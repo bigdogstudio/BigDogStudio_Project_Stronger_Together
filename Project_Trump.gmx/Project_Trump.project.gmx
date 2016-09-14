@@ -11,13 +11,15 @@
     <sprites name="Characters">
       <sprite>sprites\spr_donald_still</sprite>
       <sprite>sprites\spr_donald_ani</sprite>
-      <sprite>sprites\spr_enemy_donkey</sprite>
+      <sprite>sprites\spr_enemy_donkey_ani</sprite>
+      <sprite>sprites\spr_enemy_ground_ani</sprite>
       <sprite>sprites\spr_hillary_p0</sprite>
-      <sprite>sprites\spr_hillary_1</sprite>
+      <sprite>sprites\spr_hillary_p1</sprite>
       <sprite>sprites\spr_donald_attack</sprite>
-      <sprite>sprites\spr_new_enemy</sprite>
+      <sprite>sprites\spr_enemy_new</sprite>
       <sprite>sprites\spr_generic_enemy</sprite>
       <sprite>sprites\spr_enemy_ground</sprite>
+      <sprite>sprites\spr_enemy_donkey_still</sprite>
     </sprites>
     <sprites name="Objects">
       <sprite>sprites\spr_emails</sprite>
@@ -38,7 +40,8 @@
     </scripts>
     <scripts name="Character Script">
       <script>scripts\scr_damage_check.gml</script>
-      <script>scripts\script6.gml</script>
+      <script>scripts\scr_enemy_donkey_state.gml</script>
+      <script>scripts\scr_enemy_follow.gml</script>
     </scripts>
     <scripts name="Controller Script">
       <script>scripts\scr_menu.gml</script>
