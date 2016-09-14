@@ -32,12 +32,19 @@
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\scr_set_def_text.gml</script>
-    <script>scripts\scr_add_points.gml</script>
-    <script>scripts\scr_damage_check.gml</script>
-    <script>scripts\scr_menu.gml</script>
-    <script>scripts\scr_pause_menu.gml</script>
-    <script>scripts\scr_check_spawn.gml</script>
+    <scripts name="Text Script">
+      <script>scripts\scr_set_def_txt.gml</script>
+      <script>scripts\scr_add_points.gml</script>
+    </scripts>
+    <scripts name="Character Script">
+      <script>scripts\scr_damage_check.gml</script>
+      <script>scripts\script6.gml</script>
+    </scripts>
+    <scripts name="Controller Script">
+      <script>scripts\scr_menu.gml</script>
+      <script>scripts\scr_pause_menu.gml</script>
+      <script>scripts\scr_check_spawn.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_default</font>
@@ -51,12 +58,12 @@
     <objects name="Objects">
       <object>objects\obj_emails</object>
       <object>objects\obj_wall</object>
-      <object>objects\obj_menu</object>
-      <object>objects\obj_pause_menu</object>
     </objects>
     <objects name="Controllers">
       <object>objects\obj_points</object>
       <object>objects\obj_spawner</object>
+      <object>objects\obj_pause_menu</object>
+      <object>objects\obj_menu</object>
     </objects>
   </objects>
   <rooms name="rooms">

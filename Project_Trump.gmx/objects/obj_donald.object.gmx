@@ -7,7 +7,140 @@
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
-  <events/>
+  <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Init Vars
+image_speed = 0.1;
+grav = 0.2;
+hsp  = 0; //horiz-speed
+vsp  = 0; //vert-speed
+jumpspeed = 7;
+movespeed = 4;
+hp = 100;
+key_left = 0;
+key_right = 0;
+key_jump = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Movement and Inputs
+if (global.pause == 1)
+{
+    exit;
+}
+key_jump = max(keyboard_check(ord("W")),keyboard_check(vk_up),0);
+key_right = max(keyboard_check(ord("D")),keyboard_check(vk_right),0);
+key_left = max(keyboard_check(ord("A")),keyboard_check(vk_left),0)
+
+if (key_jump == 1)
+{
+    key_jump = 1; //jump pressed
+    //Change to jumping when made, still for now
+    sprite_index = spr_donald_still;
+
+}
+if (key_right == 1)
+{
+    key_right = 1; //right key pressed
+    sprite_index = spr_donald_ani;
+    //he is scaled by 2 so we need to scale by 2 here
+    image_xscale = 1;
+}
+if (key_left)
+{
+    key_left = -1; //left key pressed
+    sprite_index = spr_donald_ani; //moving, ani donald
+     //he is scaled by 2 so we need to scale by 2 here
+    image_xscale = -1;
+}
+/*if (keyboard_check(ord("S")))
+{
+    sprite_index = spr_donald_ani;
+    y += 5;
+    
+}
+*/
+if (keyboard_check(vk_nokey))
+{
+    sprite_index = spr_donald_still; //not moving still donald
+}
+//Set our movement
+move = key_left + key_right; //key_left is neg so we can add these to get net direction
+hsp  = move * movespeed;
+if (vsp &lt; 10)
+{
+    vsp += grav;
+}
+
+//Checking that we are against a wall, only going to jump against walls
+//Will need to this if adding platforms or make the second wall child?
+//May work
+if (place_meeting(x,y+1,obj_wall))
+{
+    vsp = key_jump * -jumpspeed; //Our jumpspeed is pos, but neg moves up
+}
+
+//Horizontal Collision
+/*if (place_meeting(x+hsp,y, obj_wall) &amp;&amp; hsp != 0)
+{
+    while (!place_meeting(x+sign(hsp),y,obj_wall))
+    {
+        x+= sign(hsp)
+    }
+    hsp = 0;
+}*/
+x += hsp;
+/*
+if (place_meeting(x,y+vsp, obj_wall) &amp;&amp; vsp != 0)
+{
+    while (!place_meeting(x,y+sign(vsp), obj_wall))
+    {
+        vsp += sign(vsp);
+    }
+    vsp = 0;
+}*/
+y += vsp;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+  </events>
   <PhysicsObject>0</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>
   <PhysicsObjectShape>0</PhysicsObjectShape>
