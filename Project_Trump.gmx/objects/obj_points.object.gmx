@@ -53,7 +53,7 @@ global.points = 0;
             <string>///Draw Our Values On Screen
 scr_set_def_txt();
 draw_text(x,y,"Points: " + string(global.points));
-draw_text(x+12,y,"Health: " + string(obj_donald.life));
+draw_text(x+10,y+16,"Health: " + string(obj_donald.hp));
 </string>
           </argument>
         </arguments>

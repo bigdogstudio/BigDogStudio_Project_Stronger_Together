@@ -36,6 +36,7 @@ hp = 100;
 key_left = 0;
 key_right = 0;
 key_jump = 0;
+damage   = 20;
 </string>
           </argument>
         </arguments>
@@ -62,6 +63,11 @@ key_jump = 0;
 if (global.pause == 1)
 {
     exit;
+}
+if (hp &lt;= 0)
+{
+    //restarts room
+    room_restart();
 }
 key_jump = max(keyboard_check(ord("W")),keyboard_check(vk_up),0);
 key_right = max(keyboard_check(ord("D")),keyboard_check(vk_right),0);
@@ -135,6 +141,9 @@ if (place_meeting(x,y+vsp, obj_wall) &amp;&amp; vsp != 0)
     vsp = 0;
 }*/
 y += vsp;
+
+//Check for death
+
 </string>
           </argument>
         </arguments>

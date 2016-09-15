@@ -39,7 +39,7 @@
       <script>scripts\scr_add_points.gml</script>
     </scripts>
     <scripts name="Character Script">
-      <script>scripts\scr_damage_check.gml</script>
+      <script>scripts\scr_cause_damage.gml</script>
       <script>scripts\scr_enemy_donkey_state.gml</script>
       <script>scripts\scr_enemy_follow.gml</script>
     </scripts>

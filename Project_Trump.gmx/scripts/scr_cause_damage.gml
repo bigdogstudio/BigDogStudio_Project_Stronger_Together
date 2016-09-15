@@ -12,6 +12,7 @@ else
 {
     //You are dead!  Setting newHealth to -1 to indicate you are dead!
     newHealth = -1;
+    //instance_destroy(); this will destroy what calls it
     return(newHealth);
 }
 
