@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>//Set Image Speed/ Frame And Spawn Location
-scr_check_spawn();
+//scr_check_spawn();
 image_speed = 0.1;
 //image_index = irandom(1);
 </string>

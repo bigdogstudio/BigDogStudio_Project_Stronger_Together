@@ -136,6 +136,10 @@ if (hp &lt;= 0)
 {
     instance_destroy();
 }
+if ( (x &lt; 0 || x &gt; room_width) || (y &lt; 0 || y &gt; room_height) )
+{
+    instance_destroy();
+}
 scr_enemy_donkey_state();
 </string>
           </argument>
