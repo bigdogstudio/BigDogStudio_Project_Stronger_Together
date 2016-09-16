@@ -38,6 +38,7 @@ moveRight = true;
 timeToMoving = 40;
 timeToStill  = 60;
 timeToChangeDir = 20;
+moveLeftRightSet = false;
 scr_enemy_donkey_state();
 </string>
           </argument>
@@ -62,6 +63,8 @@ scr_enemy_donkey_state();
           <argument>
             <kind>1</kind>
             <string>///Our left or right script
+moveLeftRightSet = false;
+speed = 0;
 if (moveLeft)
 {
     moveLeft = false;
