@@ -6,6 +6,8 @@
   <NewExtensions/>
   <sounds name="sound">
     <sound>sound\snd_gotmail</sound>
+    <sound>sound\snd_death_sound</sound>
+    <sound>sound\snd_jump_sound</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="Characters">

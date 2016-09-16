@@ -120,6 +120,13 @@ if (vsp &lt; 10)
 if (place_meeting(x,y+1,obj_wall))
 {
     vsp = key_jump * -jumpspeed; //Our jumpspeed is pos, but neg moves up
+    //play jump sound
+    if (!audio_is_playing(snd_jump_sound) &amp;&amp; key_jump != 0) //check sound isnt playing
+    {
+        //set our volume for this sound lower and play it
+        sound_volume(snd_jump_sound, 0.5);
+        audio_play_sound(snd_jump_sound,0,0);
+    }
 }
 
 //Horizontal Collision
