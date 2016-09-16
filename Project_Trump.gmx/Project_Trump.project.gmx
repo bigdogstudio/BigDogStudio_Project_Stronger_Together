@@ -37,6 +37,7 @@
     <scripts name="Text Script">
       <script>scripts\scr_set_def_txt.gml</script>
       <script>scripts\scr_add_points.gml</script>
+      <script>scripts\scr_game_over___.gml</script>
     </scripts>
     <scripts name="Character Script">
       <script>scripts\scr_cause_damage.gml</script>
@@ -67,6 +68,7 @@
       <object>objects\obj_spawner</object>
       <object>objects\obj_pause_menu</object>
       <object>objects\obj_menu</object>
+      <object>objects\obj_game_over</object>
     </objects>
   </objects>
   <rooms name="rooms">

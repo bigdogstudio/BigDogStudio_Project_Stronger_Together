@@ -64,11 +64,12 @@ if (global.pause == 1)
 {
     exit;
 }
-if (hp &lt;= 0)
+if ((hp &lt;= 0) || (y &gt; room_height)) // check if we are dead or offscreen
 {
     //restarts room
-    room_restart();
+    instance_create(0,0,obj_game_over);
 }
+
 key_jump = max(keyboard_check(ord("W")),keyboard_check(vk_up),0);
 key_right = max(keyboard_check(ord("D")),keyboard_check(vk_right),0);
 key_left = max(keyboard_check(ord("A")),keyboard_check(vk_left),0)

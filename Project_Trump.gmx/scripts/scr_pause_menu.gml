@@ -11,6 +11,7 @@ switch (mpos)
     {
         //Restart; lets go to the first room.
         room_goto(room_first);
+        global.pause = 0;
         showMenu = 0;
         break;
     }
@@ -18,22 +19,26 @@ switch (mpos)
     {
         //Continue Playing Game
         showMenu = 0;
+        global.pause = 0;
         break;
     }
     case 2:
     {
         //TODO load our options menu; let user change sound etc.
         showMenu = 0;
+        global.pause = 0;
         break;
     }
     case 3:
     {
         game_end();
+        global.pause = 0;
         showMenu = 0;
         break;
     }
     default:
     {
+        global.pause = 0;
         showMenu = 0;
         break;
     }    
