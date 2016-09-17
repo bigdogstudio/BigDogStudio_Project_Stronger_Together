@@ -26,20 +26,20 @@
           <argument>
             <kind>1</kind>
             <string>///Spawn Emails If No Emails
-/*
+
 if (global.pause == 1)
 {
     exit;
 }
-if(!instance_exists(obj_email))
+if(!instance_exists(obj_emails))
 {
-    instance_create(random(room_width),random(room_height),obj_email);
-    instance_create(random(room_width),random(room_height),obj_email);
-    instance_create(random(room_width),random(room_height),obj_email);
-    instance_create(random(room_width),random(room_height),obj_email);
-    instance_create(random(room_width),random(room_height),obj_email);
+    instance_create(random(room_width),random(room_height),obj_emails);
+    instance_create(random(room_width),random(room_height),obj_emails);
+    instance_create(random(room_width),random(room_height),obj_emails);
+    instance_create(random(room_width),random(room_height),obj_emails);
+    instance_create(random(room_width),random(room_height),obj_emails);
 }
-*/
+
 if (!instance_exists(obj_enemy_donkey))
 {
     var i;
