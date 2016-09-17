@@ -37,6 +37,8 @@
       <sprite>sprites\sprite19</sprite>
       <sprite>sprites\spr_wall_moving_ani</sprite>
       <sprite>sprites\spr_wall_moving_still</sprite>
+      <sprite>sprites\spr_health</sprite>
+      <sprite>sprites\spr_donald_statue</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -58,6 +60,7 @@
       <script>scripts\scr_menu.gml</script>
       <script>scripts\scr_pause_menu.gml</script>
       <script>scripts\scr_check_spawn.gml</script>
+      <script>scripts\scr_random_powerup.gml</script>
     </scripts>
     <scripts name="Object Script">
       <script>scripts\scr_wall_movement.gml</script>
@@ -77,6 +80,8 @@
       <object>objects\obj_wall</object>
       <object>objects\obj_magaHat</object>
       <object>objects\obj_wall_moving</object>
+      <object>objects\obj_donald_statue</object>
+      <object>objects\obj_health</object>
     </objects>
     <objects name="Controllers Objects">
       <object>objects\obj_points</object>

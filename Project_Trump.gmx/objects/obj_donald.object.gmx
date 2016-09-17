@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>///Init Vars
 image_speed = 0.1;
-grav = 0.2;
+grav = 0.5;
 hsp  = 0; //horiz-speed
 vsp  = 0; //vert-speed
 defJumpspeed = 8;
