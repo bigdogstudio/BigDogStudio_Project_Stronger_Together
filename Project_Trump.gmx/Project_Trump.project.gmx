@@ -12,7 +12,7 @@
     <sound>sound\snd_kill_sound</sound>
   </sounds>
   <sprites name="sprites">
-    <sprites name="Characters">
+    <sprites name="Character Sprites">
       <sprite>sprites\spr_donald_still</sprite>
       <sprite>sprites\spr_donald_ani</sprite>
       <sprite>sprites\spr_enemy_donkey_ani</sprite>
@@ -25,7 +25,7 @@
       <sprite>sprites\spr_enemy_ground</sprite>
       <sprite>sprites\spr_enemy_donkey_still</sprite>
     </sprites>
-    <sprites name="Objects">
+    <sprites name="Objects Sprites">
       <sprite>sprites\spr_emails</sprite>
       <sprite>sprites\spr_wall</sprite>
       <sprite>sprites\spr_menu_arrow</sprite>
@@ -34,6 +34,9 @@
       <sprite>sprites\spr_weapon</sprite>
       <sprite>sprites\spr_power_up</sprite>
       <sprite>sprites\spr_maga_hat</sprite>
+      <sprite>sprites\sprite19</sprite>
+      <sprite>sprites\spr_wall_moving_ani</sprite>
+      <sprite>sprites\spr_wall_moving_still</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -56,22 +59,26 @@
       <script>scripts\scr_pause_menu.gml</script>
       <script>scripts\scr_check_spawn.gml</script>
     </scripts>
+    <scripts name="Object Script">
+      <script>scripts\scr_wall_movement.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_default</font>
   </fonts>
   <objects name="objects">
-    <objects name="Characters">
+    <objects name="Character Objects">
       <object>objects\obj_donald</object>
       <object>objects\obj_par_enemy</object>
       <object>objects\obj_enemy_donkey</object>
     </objects>
-    <objects name="Objects">
+    <objects name="Object Objects">
       <object>objects\obj_emails</object>
       <object>objects\obj_wall</object>
       <object>objects\obj_magaHat</object>
+      <object>objects\obj_wall_moving</object>
     </objects>
-    <objects name="Controllers">
+    <objects name="Controllers Objects">
       <object>objects\obj_points</object>
       <object>objects\obj_spawner</object>
       <object>objects\obj_pause_menu</object>
