@@ -43,6 +43,8 @@ xHatOffset = 3;
 yHatOffset = -15;
 global.powerUpHat = false;
 
+//create camera
+instance_create(x,y,obj_view);
 </string>
           </argument>
         </arguments>

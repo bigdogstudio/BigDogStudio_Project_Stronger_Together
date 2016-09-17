@@ -84,6 +84,7 @@
       <object>objects\obj_pause_menu</object>
       <object>objects\obj_menu</object>
       <object>objects\obj_game_over</object>
+      <object>objects\obj_view</object>
     </objects>
   </objects>
   <rooms name="rooms">
