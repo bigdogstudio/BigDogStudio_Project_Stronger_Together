@@ -30,13 +30,19 @@ image_speed = 0.1;
 grav = 0.2;
 hsp  = 0; //horiz-speed
 vsp  = 0; //vert-speed
-jumpspeed = 12;
+defJumpspeed = 8;
+defMovespeed = 4;
+jumpspeed = 8;
 movespeed = 4;
 hp = 100;
 key_left = 0;
 key_right = 0;
 key_jump = 0;
 damage   = 20;
+xHatOffset = 3;
+yHatOffset = -15;
+global.powerUpHat = false;
+
 </string>
           </argument>
         </arguments>
@@ -150,7 +156,28 @@ if (place_meeting(x,y+vsp, obj_wall) &amp;&amp; vsp != 0)
 }*/
 y += vsp;
 
-//Check for death
+///Control our Hat and Weapons
+if (global.powerUpHat == true)
+{
+    //sets hat xScale to our xscale;
+    obj_magaHat.image_xscale = image_xscale;
+    if (image_xscale == 1)
+    {
+        //move hat in correct dir.
+        obj_magaHat.x = x + xHatOffset;
+    }
+    else if (image_xscale == -1)
+    {
+        //move hat in correct dir.
+        obj_magaHat.x = x - xHatOffset;
+    }
+    
+    obj_magaHat.y = y + yHatOffset;
+    obj_magaHat.depth = -y;
+}
+
+
+
 
 </string>
           </argument>

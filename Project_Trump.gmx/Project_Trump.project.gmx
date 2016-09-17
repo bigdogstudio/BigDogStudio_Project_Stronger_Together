@@ -33,6 +33,7 @@
       <sprite>sprites\spr_flash</sprite>
       <sprite>sprites\spr_weapon</sprite>
       <sprite>sprites\spr_power_up</sprite>
+      <sprite>sprites\spr_maga_hat</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -68,6 +69,7 @@
     <objects name="Objects">
       <object>objects\obj_emails</object>
       <object>objects\obj_wall</object>
+      <object>objects\obj_magaHat</object>
     </objects>
     <objects name="Controllers">
       <object>objects\obj_points</object>

@@ -16,7 +16,7 @@ if (still)
 else if(moving)
 {
     sprite_index = spr_enemy_donkey_ani;
-    if (distance_to_object(obj_donald) < 100 ) // check our distance to player, if close move towards him
+    if (distance_to_object(obj_donald) < 100 && (distance_to_point(obj_donald.x,y) > 10)) // check our distance to player, if close move towards him
     //((distance_to_point(obj_donald.x,y) < 100) && (distance_to_point(obj_donald.x,y) > 10)) //check only donalds x, we dont consider y!
     //(distance_to_object(obj_donald) < 100 && distance_to_object(obj_donald) > 5) // check our distance to player, if close move towards him
     {
@@ -41,20 +41,28 @@ else if(moving)
     }
     else
     {
+        //reset our speed from move to obj;
+        speed = 0;
         
         if alarm[0] == -1
         {
-            alarm[0] = timeToStill; //we will move for 240 / franerate
+            //we will move for 240 / franerate
+            alarm[0] = timeToStill; 
         }
-        if (alarm[1] == -1) //Alarm 1 = left right move 
+        
+        //Alarm 1 = left right move 
+        if (alarm[1] == -1) 
         {
             alarm[1] = timeToChangeDir;
         }
-        if (moveLeftRightSet)
+        
+        /*if (moveLeftRightSet)
         {
             //must reset speed from being set in move towards point
             speed = 0;
         }
+        should always reset speed if in else not jsut movelftright
+        */
         if (moveLeft)
         {
             image_xscale = -1;
