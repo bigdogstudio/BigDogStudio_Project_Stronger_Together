@@ -72,7 +72,7 @@
     <instance objName="obj_wall" x="448" y="416" name="inst_BCEA8032" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="480" y="448" name="inst_E4C02D00" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_pause_menu" x="64" y="416" name="inst_8B079211" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_enemy_donkey" x="256" y="224" name="inst_D2A438DC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_enemy_donkey" x="544" y="480" name="inst_D2A438DC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_enemy_donkey" x="544" y="448" name="inst_4C4A5AAB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_enemy_donkey" x="192" y="448" name="inst_851503AC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_points" x="96" y="64" name="inst_F33C2C99" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

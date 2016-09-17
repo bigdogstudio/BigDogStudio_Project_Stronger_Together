@@ -133,7 +133,13 @@ else if(still)
             <kind>1</kind>
             <string>if (global.pause == 1)
 {
+    speed = 0;
+    image_speed = 0;
     exit;
+}
+if (image_speed == 0)
+{
+    image_speed = 0.1;
 }
 if (hp &lt;= 0)
 {

@@ -16,7 +16,7 @@ if (still)
 else if(moving)
 {
     sprite_index = spr_enemy_donkey_ani;
-    if (distance_to_object(obj_donald) < 100 && distance_to_object(obj_donald) > 5) // check our distance to player, if close move towards him
+    if (distance_to_object(obj_donald) < 100 ) // check our distance to player, if close move towards him
     //((distance_to_point(obj_donald.x,y) < 100) && (distance_to_point(obj_donald.x,y) > 10)) //check only donalds x, we dont consider y!
     //(distance_to_object(obj_donald) < 100 && distance_to_object(obj_donald) > 5) // check our distance to player, if close move towards him
     {
