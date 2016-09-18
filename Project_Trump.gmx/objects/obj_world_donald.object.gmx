@@ -151,47 +151,26 @@ hsp  = move * movespeed;
 }*/
 vsp = key_jump * -jumpspeed; //Our jumpspeed is pos, but neg moves up
 //Horizontal Collision
-/*if (place_meeting(x+hsp,y, obj_wall) &amp;&amp; hsp != 0)
+if (place_meeting(x+hsp,y, obj_world_collision_wall) &amp;&amp; hsp != 0)
 {
-    while (!place_meeting(x+sign(hsp),y,obj_wall))
+    while (place_meeting(x+sign(hsp),y,obj_wall))
     {
-        x+= sign(hsp)
+        x -= sign(hsp)
     }
     hsp = 0;
-}*/
+}
 x += hsp;
-/*
-if (place_meeting(x,y+vsp, obj_wall) &amp;&amp; vsp != 0)
+
+if (place_meeting(x,y+vsp, obj_world_collision_wall) &amp;&amp; vsp != 0)
 {
-    while (!place_meeting(x,y+sign(vsp), obj_wall))
+    while (place_meeting(x,y+sign(vsp), obj_wall))
     {
-        vsp += sign(vsp);
+        y -= sign(vsp);
     }
     vsp = 0;
-}*/
+}
 y += vsp;
 
-///Control our Hat and Weapons
-/*
-if (global.powerUpHat == true)
-{
-    //sets hat xScale to our xscale;
-    obj_magaHat.image_xscale = image_xscale;
-    if (image_xscale == 1)
-    {
-        //move hat in correct dir.
-        obj_magaHat.x = x + xHatOffset;
-    }
-    else if (image_xscale == -1)
-    {
-        //move hat in correct dir.
-        obj_magaHat.x = x - xHatOffset;
-    }
-    
-    obj_magaHat.y = y + yHatOffset;
-    obj_magaHat.depth = -y;
-}
-*/
 
 
 

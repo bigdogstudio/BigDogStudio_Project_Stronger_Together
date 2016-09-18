@@ -75,10 +75,12 @@ lockedRoom = false;
           <argument>
             <kind>1</kind>
             <string>///Got to selected room specified in specific door creation in room
-if (global.levelsUnlocked &gt;= doorLevel)
+if (global.levelsUnlocked &gt;= doorLevel &amp;&amp; !instance_exists(obj_room_trans))
 {
     //Go to selected room specified in specific door creation in room
-    room_goto(selectedRoom);
+    var roomFade = instance_create(x,y,obj_room_trans);
+    roomFade.selectedRoom = selectedRoom;
+    
 }
 else
 {

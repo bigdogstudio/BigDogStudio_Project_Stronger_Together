@@ -46,6 +46,7 @@
       <sprite>sprites\spr_level_boss</sprite>
       <sprite>sprites\spr_level_door</sprite>
       <sprite>sprites\spr_path</sprite>
+      <sprite>sprites\spr_collision_world_wall</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -99,6 +100,7 @@
       <object>objects\obj_menu</object>
       <object>objects\obj_game_over</object>
       <object>objects\obj_view</object>
+      <object>objects\obj_room_trans</object>
     </objects>
     <objects name="World Objects">
       <object>objects\obj_world_door</object>
@@ -106,6 +108,7 @@
       <object>objects\obj_boss_house</object>
       <object>objects\obj_world_donald</object>
       <object>objects\obj_world_path</object>
+      <object>objects\obj_world_collision_wall</object>
     </objects>
   </objects>
   <rooms name="rooms">
