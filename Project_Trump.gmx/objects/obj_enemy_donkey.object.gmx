@@ -189,6 +189,11 @@ else if (collision_rectangle(x-15,y-3,x+15,y-17,obj_donald,false,false)) //Donal
     //instance_destroy();
     hp = scr_cause_damage(hp,obj_donald.damage);
     global.points += 5;
+    dropRate = random(3);
+    for (iter = 0; iter &lt; dropRate; iter++)
+    {
+        instance_create(x,y,obj_coin);
+    }
 }
 </string>
           </argument>

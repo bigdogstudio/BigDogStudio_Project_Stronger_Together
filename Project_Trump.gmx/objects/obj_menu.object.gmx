@@ -34,7 +34,7 @@ menu[3] = "Quit :[ Don't Leave The Big Dog's So Soon!"
 space = 64; //Arbitrary Spacing For Our Menu
 mpos  = 0; //Represents where our cursor is.
 
-
+global.pause = 0; //Init value for our pause menu
 
 </string>
           </argument>

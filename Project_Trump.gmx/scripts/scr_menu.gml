@@ -10,7 +10,8 @@ switch (mpos)
     case 0:
     {
         //Start; lets go to the first room.
-        room_goto_next();
+        //room_goto_next(); - Main Menu should take us to load out room
+        room_goto(rm_world_select);
         break;
     }
     case 1:

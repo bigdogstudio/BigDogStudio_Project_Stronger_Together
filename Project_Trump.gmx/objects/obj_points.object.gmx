@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>0</persistent>
+  <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -27,7 +27,8 @@
             <kind>1</kind>
             <string>///Init Points
 global.points = 0;
-
+global.cash   = 0;
+global.levelsUnlocked = 1;
 </string>
           </argument>
         </arguments>
@@ -53,7 +54,12 @@ global.points = 0;
             <string>///Draw Our Values On Screen
 scr_set_def_txt();
 draw_text(x,y,"Points: " + string(global.points));
-draw_text(x+10,y+16,"Health: " + string(obj_donald.hp));
+if (instance_exists(obj_donald))
+{
+    draw_text(x+10,y+16,"Health: " + string(obj_donald.hp));
+}
+draw_text(x+10,y+32,"Cash: " + string(global.cash));
+///write if room locked
 </string>
           </argument>
         </arguments>

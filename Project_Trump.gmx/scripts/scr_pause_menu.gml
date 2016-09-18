@@ -1,9 +1,10 @@
 //Scr_menu
 /*
-menu[0] = "Restart";
-menu[1] = "Continue";
-menu[2] = "Options";
-menu[3] = "Quit :[ Don't Leave The Big Dog's So Soon!"
+menu[0] = "Go To Main Menu";
+menu[1] = "Restart";
+menu[2] = "Continue";
+menu[3] = "Options";
+menu[4] = "Quit :[ Don't Leave The Big Dog's So Soon!"
 */
 switch (mpos)
 {
@@ -12,29 +13,41 @@ switch (mpos)
         //Restart; lets go to the first room.
         room_goto(room_first);
         global.pause = 0;
+        global.points = 0;
+        global.cash   = 0;
         showMenu = 0;
         break;
     }
     case 1:
+    {
+        //Restart; lets go to the first room.
+        room_restart();
+        global.pause = 0;
+        global.points = 0;
+        global.cash   = 0;
+        showMenu = 0;
+        break;
+    }
+    case 2:
     {
         //Continue Playing Game
         showMenu = 0;
         global.pause = 0;
         break;
     }
-    case 2:
+    case 3:
     {
         //TODO load our options menu; let user change sound etc.
         showMenu = 0;
         global.pause = 0;
-        break;
+        break;    
     }
-    case 3:
+    case 4:
     {
         game_end();
         global.pause = 0;
         showMenu = 0;
-        break;
+        break;    
     }
     default:
     {

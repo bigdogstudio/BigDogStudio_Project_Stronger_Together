@@ -39,10 +39,18 @@
       <sprite>sprites\spr_wall_moving_still</sprite>
       <sprite>sprites\spr_health</sprite>
       <sprite>sprites\spr_donald_statue</sprite>
+      <sprite>sprites\spr_coin</sprite>
+    </sprites>
+    <sprites name="World Sprites">
+      <sprite>sprites\spr_level_one</sprite>
+      <sprite>sprites\spr_level_boss</sprite>
+      <sprite>sprites\spr_level_door</sprite>
+      <sprite>sprites\spr_path</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\brg_cyberspace</background>
+    <background>background\background1</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -82,6 +90,7 @@
       <object>objects\obj_wall_moving</object>
       <object>objects\obj_donald_statue</object>
       <object>objects\obj_health</object>
+      <object>objects\obj_coin</object>
     </objects>
     <objects name="Controllers Objects">
       <object>objects\obj_points</object>
@@ -91,9 +100,23 @@
       <object>objects\obj_game_over</object>
       <object>objects\obj_view</object>
     </objects>
+    <objects name="World Objects">
+      <object>objects\obj_world_door</object>
+      <object>objects\obj_level_one_house</object>
+      <object>objects\obj_boss_house</object>
+      <object>objects\obj_world_donald</object>
+      <object>objects\obj_world_path</object>
+    </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room0</room>
+    <rooms name="Main Menu">
+      <room>rooms\rm_mainmenu</room>
+      <room>rooms\rm_world_select</room>
+    </rooms>
+    <rooms name="Levels">
+      <room>rooms\rm_first</room>
+      <room>rooms\rm_boss</room>
+    </rooms>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

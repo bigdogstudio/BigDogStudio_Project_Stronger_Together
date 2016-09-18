@@ -75,7 +75,6 @@
     <instance objName="obj_enemy_donkey" x="544" y="480" name="inst_D2A438DC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_enemy_donkey" x="544" y="448" name="inst_4C4A5AAB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_enemy_donkey" x="192" y="448" name="inst_851503AC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_points" x="96" y="64" name="inst_F33C2C99" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_emails" x="384" y="448" name="inst_12E3E144" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_emails" x="320" y="448" name="inst_DD5D1DEA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_emails" x="416" y="384" name="inst_5928A293" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
