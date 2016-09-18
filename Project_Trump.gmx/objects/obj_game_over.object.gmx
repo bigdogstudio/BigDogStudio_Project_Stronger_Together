@@ -74,8 +74,8 @@ room_restart();
           <argument>
             <kind>1</kind>
             <string>scr_set_def_txt();
-draw_text(room_width/2,room_height/2+40,"Game Over");
-draw_text(room_width/2,room_height/2+80,"Press U To Restart");
+draw_text(view_xview[0] + 512,room_height/2+40,"Game Over");
+draw_text(view_xview[0] + 512,room_height/2+80,"Press U To Restart");
 global.pause = 1;
 </string>
           </argument>
