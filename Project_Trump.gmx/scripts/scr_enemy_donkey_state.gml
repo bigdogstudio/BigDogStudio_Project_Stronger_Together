@@ -15,6 +15,7 @@ if (distance_to_object(obj_donald) < agroRange) // check our distance to player,
         else
         {
             move_towards_point(obj_donald.x,y,enemySpeed);
+            //reg move animation
         }
         //Tell our enemy to stay on screen
         if ((x >= (room_width/2)) && !moveLeftRightSet)

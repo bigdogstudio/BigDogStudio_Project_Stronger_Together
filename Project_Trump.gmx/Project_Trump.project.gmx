@@ -39,6 +39,7 @@
       <sprite>sprites\spr_health</sprite>
       <sprite>sprites\spr_donald_statue</sprite>
       <sprite>sprites\spr_coin</sprite>
+      <sprite>sprites\spr_end_level_door</sprite>
     </sprites>
     <sprites name="World Sprites">
       <sprite>sprites\spr_level_one</sprite>
@@ -91,6 +92,7 @@
       <object>objects\obj_donald_statue</object>
       <object>objects\obj_health</object>
       <object>objects\obj_coin</object>
+      <object>objects\obj_end_level_door</object>
     </objects>
     <objects name="Controllers Objects">
       <object>objects\obj_points</object>

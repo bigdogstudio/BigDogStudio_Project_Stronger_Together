@@ -108,8 +108,6 @@
     <instance objName="obj_world_collision_wall" x="800" y="320" name="inst_F8B4BF9E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_world_collision_wall" x="704" y="320" name="inst_0F37A797" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_world_collision_wall" x="704" y="352" name="inst_0BDBB318" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_world_collision_wall" x="704" y="384" name="inst_44155BCE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_world_collision_wall" x="288" y="384" name="inst_43099455" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_world_collision_wall" x="288" y="352" name="inst_03755A98" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_world_collision_wall" x="288" y="320" name="inst_095AC350" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_world_collision_wall" x="288" y="288" name="inst_32C0192F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
