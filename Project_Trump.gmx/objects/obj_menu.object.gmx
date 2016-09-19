@@ -124,7 +124,7 @@ for (m=0; m &lt; (array_length_1d(menu)); m+=1)
     if (m == 3)
     {
         //Long Message, Need to move by more
-        draw_text(x + 220, y + (m * space), string(menu[m]));   
+        draw_text(x + 195, y + (m * space), string(menu[m]));   
     }
     else
     {

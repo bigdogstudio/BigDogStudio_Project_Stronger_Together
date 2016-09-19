@@ -28,6 +28,8 @@
             <string>///Init Vars
 enemySpeed  = 5;
 enemyDamage = 3;
+attackRange = 6;
+agroRange = 100;
 hp = 20;
 image_speed = 0.1;
 //set state to still

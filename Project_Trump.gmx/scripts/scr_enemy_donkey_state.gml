@@ -1,27 +1,21 @@
 ///Enemy movement script
 //def initial in enemy
 //set timers
-if (still)
-{
-    sprite_index = spr_enemy_donkey_still;
-    //can do image_speed image index make this generic for enemies
-    if(alarm[0] == -1) //alarm has not yet been set
-    {
-        //this alarm tells us to start moving;
-        alarm[0] = timeToMoving;
-    }
-    moveLeftRightSet = false; //Do we want to always eval?
-    
-}
-else if(moving)
-{
-    sprite_index = spr_enemy_donkey_ani;
-    if (distance_to_object(obj_donald) < 100 && (distance_to_point(obj_donald.x,y) > 10)) // check our distance to player, if close move towards him
+if (distance_to_object(obj_donald) < agroRange) // check our distance to player, if close move towards him
     //((distance_to_point(obj_donald.x,y) < 100) && (distance_to_point(obj_donald.x,y) > 10)) //check only donalds x, we dont consider y!
     //(distance_to_object(obj_donald) < 100 && distance_to_object(obj_donald) > 5) // check our distance to player, if close move towards him
-    {
         //if within 100 pixels we move towards donald only for x dir
-        move_towards_point(obj_donald.x,y,enemySpeed);
+    {
+        sprite_index = spr_enemy_donkey_ani;
+        if (distance_to_point(obj_donald.x,y) < attackRange)
+        {
+            speed = 0;
+            //attack animation;
+        }
+        else
+        {
+            move_towards_point(obj_donald.x,y,enemySpeed);
+        }
         //Tell our enemy to stay on screen
         if ((x >= (room_width/2)) && !moveLeftRightSet)
         {
@@ -38,9 +32,23 @@ else if(moving)
         //We tell the enemy close not to reset their timers until in range.
         alarm[0] = -1;
         alarm[1] = -1;
-    }
-    else
+}
+else if (still)
+{
+    speed = 0;
+    sprite_index = spr_enemy_donkey_still;
+    //can do image_speed image index make this generic for enemies
+    if(alarm[0] == -1) //alarm has not yet been set
     {
+        //this alarm tells us to start moving;
+        alarm[0] = timeToMoving;
+    }
+    moveLeftRightSet = false; //Do we want to always eval?
+    
+}
+else if(moving)
+{
+        sprite_index = spr_enemy_donkey_ani;
         //reset our speed from move to obj;
         speed = 0;
         
@@ -74,6 +82,5 @@ else if(moving)
             image_xscale = 1;
             x += enemySpeed;   
         }        
-    }
 }
 

@@ -82,6 +82,10 @@ if (global.levelsUnlocked &gt;= doorLevel &amp;&amp; !instance_exists(obj_room_t
     roomFade.selectedRoom = selectedRoom;
     
 }
+else if (instance_exists(obj_room_trans))
+{
+    //our room exists, do nothing
+}
 else
 {
     scr_set_def_txt();

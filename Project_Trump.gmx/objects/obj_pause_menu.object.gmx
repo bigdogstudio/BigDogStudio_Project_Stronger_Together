@@ -62,6 +62,11 @@ global.pause = 0; //Init value for our pause menu
           <argument>
             <kind>1</kind>
             <string>///Navigates Us Through Menu
+//if not paused dont do this
+if global.pause != 1
+{
+    exit;
+}
 var move = 0;
 //Check for menu movement
 move -= max(keyboard_check_pressed(vk_up),keyboard_check_pressed(ord("W")),0);
@@ -120,6 +125,11 @@ if (global.pause == 1)
     {
         //Long Message, Need to move by more
         draw_text(view_xview[0] + space * 4, y + (m * space), string(menu[m]));   
+    }
+    else if m == 0
+    {
+        //Long Message, Need to move by more
+        draw_text(view_xview[0] + space * 2.5, y + (m * space), string(menu[m])); 
     }
     else
     {

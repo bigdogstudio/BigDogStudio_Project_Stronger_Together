@@ -8,7 +8,6 @@
     <sound>sound\snd_gotmail</sound>
     <sound>sound\snd_death_sound</sound>
     <sound>sound\snd_jump_sound</sound>
-    <sound>sound\sound4</sound>
     <sound>sound\snd_kill_sound</sound>
   </sounds>
   <sprites name="sprites">
