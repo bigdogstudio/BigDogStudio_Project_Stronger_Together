@@ -25,7 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>lockedRoomMsgLength = 120;
+            <string>if (room == rm_first)
+{
+    roomLevel = 1;
+}
+lockedRoomMsgLength = 120;
 lockedRoom = false;
 depth = -y;
 doorLevel = 0;
@@ -56,7 +60,10 @@ selectedRoom = rm_world_select;
 if (global.levelsUnlocked &gt;= doorLevel &amp;&amp; !instance_exists(obj_room_trans))
 {
     //completed a level unlocked another door!
-    global.levelsUnlocked += 1;
+    if (global.levelsUnlocked == roomLevel)
+    {
+        global.levelsUnlocked += 1;
+    }
     //Go to selected room specified in specific door creation in room
     var roomFade = instance_create(x,y,obj_room_trans);
     roomFade.selectedRoom = selectedRoom;

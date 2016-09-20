@@ -28,6 +28,7 @@
             <string>///Init Points
 global.points = 0;
 global.cash   = 0;
+//Depending on how this works may need to set it differently.
 global.levelsUnlocked = 1;
 </string>
           </argument>

@@ -159,6 +159,7 @@ if (place_meeting(x,y+vsp, obj_wall) &amp;&amp; vsp != 0)
     vsp = 0;
 }*/
 y += vsp;
+depth = -y + 1;
 
 ///Control our Hat and Weapons
 if (global.powerUpHat == true)
