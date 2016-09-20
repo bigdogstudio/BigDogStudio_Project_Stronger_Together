@@ -10,7 +10,7 @@ switch (mpos)
 {
     case 0:
     {
-        //Restart; lets go to the first room.
+        //Goto main menu; lets go to the first room.
         room_goto(room_first);
         global.pause = 0;
         global.points = 0;
@@ -20,7 +20,7 @@ switch (mpos)
     }
     case 1:
     {
-        //Restart; lets go to the first room.
+        //Restart; lets restart our room.
         room_restart();
         global.pause = 0;
         global.points = 0;

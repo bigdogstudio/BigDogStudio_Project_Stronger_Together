@@ -50,6 +50,31 @@ instance_create(x,y,obj_view);
         </arguments>
       </action>
     </event>
+    <event eventtype="2" enumb="9">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///check if our timer is up; from boss collision
+vspeed = 0
+hspeed = 0
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -137,29 +162,33 @@ if (place_meeting(x,y+1,obj_wall))
     }
 }
 
+
+//
+
+if (place_meeting(x,y+vsp, obj_wall))
+// &amp;&amp; vsp != 0)
+{
+    while (place_meeting(x,y+sign(vsp), obj_wall))
+    {
+        vsp -= sign(vsp);
+    }
+    vsp = 0;
+}
+y += vsp;
+depth = -y + 1;
+
 //Horizontal Collision
-/*
-if (place_meeting(x+hsp,y, obj_wall) &amp;&amp; hsp != 0)
+
+if (place_meeting(x+hsp,y, obj_wall))
+// &amp;&amp; hsp != 0)
 {
     while (place_meeting(x+sign(hsp),y,obj_wall))
     {
         x -= sign(hsp)
     }
     hsp = 0;
-}*/
+}
 x += hsp;
-//
-/*
-if (place_meeting(x,y+vsp, obj_wall) &amp;&amp; vsp != 0)
-{
-    while (!place_meeting(x,y+sign(vsp), obj_wall))
-    {
-        vsp += sign(vsp);
-    }
-    vsp = 0;
-}*/
-y += vsp;
-depth = -y + 1;
 
 ///Control our Hat and Weapons
 if (global.powerUpHat == true)

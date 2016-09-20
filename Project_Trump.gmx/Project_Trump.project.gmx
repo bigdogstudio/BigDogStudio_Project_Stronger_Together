@@ -16,8 +16,8 @@
       <sprite>sprites\spr_donald_ani</sprite>
       <sprite>sprites\spr_enemy_donkey_ani</sprite>
       <sprite>sprites\spr_enemy_ground_ani</sprite>
-      <sprite>sprites\spr_hillary_p0</sprite>
-      <sprite>sprites\spr_hillary_p1</sprite>
+      <sprite>sprites\spr_enemy_hillary_still</sprite>
+      <sprite>sprites\spr_enemy_hillary_ani</sprite>
       <sprite>sprites\spr_donald_attack</sprite>
       <sprite>sprites\spr_enemy_new</sprite>
       <sprite>sprites\spr_generic_enemy</sprite>
@@ -64,6 +64,7 @@
       <script>scripts\scr_cause_damage.gml</script>
       <script>scripts\scr_enemy_donkey_state.gml</script>
       <script>scripts\scr_enemy_follow.gml</script>
+      <script>scripts\scr_enemy_hillary_state.gml</script>
     </scripts>
     <scripts name="Controller Script">
       <script>scripts\scr_menu.gml</script>
@@ -83,6 +84,7 @@
       <object>objects\obj_donald</object>
       <object>objects\obj_par_enemy</object>
       <object>objects\obj_enemy_donkey</object>
+      <object>objects\obj_enemy_hillary</object>
     </objects>
     <objects name="Object Objects">
       <object>objects\obj_emails</object>
