@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>///Init Vars
-wallSpeed  = 3;
+wallSpeed  = 2;
 image_speed = 0.1;
 //set state to still
 moving    = false;

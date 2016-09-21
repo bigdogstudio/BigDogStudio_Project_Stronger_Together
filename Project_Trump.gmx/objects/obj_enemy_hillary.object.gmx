@@ -218,13 +218,13 @@ if(collision_rectangle(x-14,y+1,x+14,y+15,obj_donald,false,false))
         other.alarm[9] = 20;
         if (other.hsp &gt; 0)
         {
-            other.hspeed += 5;
+            other.hspeed += 3;
         }
         else
         {
-            other.hspeed -= 5;
+            other.hspeed -= 3;
         }
-        other.y -= 80;
+        other.y -= 15;
     }
 }
 else if (collision_rectangle(x-15,y-3,x+15,y-17,obj_donald,false,false)) //Donald hits our head
@@ -240,13 +240,13 @@ else if (collision_rectangle(x-15,y-3,x+15,y-17,obj_donald,false,false)) //Donal
     
         if (other.hsp &gt; 0)
         {
-            other.hspeed += 5;
+            other.hspeed += 4;
         }
         else
         {
-            other.hspeed -= 5;
+            other.hspeed -= 4;
         }
-        other.y -= 80;
+        other.y -= 65;
     }
 }
 </string>
