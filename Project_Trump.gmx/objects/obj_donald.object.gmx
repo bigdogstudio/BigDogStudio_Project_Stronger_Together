@@ -27,13 +27,13 @@
             <kind>1</kind>
             <string>///Init Vars
 image_speed = 0.1;
-grav = 0.5;
+grav = 0.3;
 hsp  = 0; //horiz-speed
 vsp  = 0; //vert-speed
-defJumpspeed = 8;
-defMovespeed = 4;
-jumpspeed = 8;
-movespeed = 4;
+defJumpspeed = 6;
+defMovespeed = 3;
+jumpspeed = 6;
+movespeed = 3;
 hp = 100;
 key_left = 0;
 key_right = 0;
@@ -68,8 +68,7 @@ instance_create(x,y,obj_view);
           <argument>
             <kind>1</kind>
             <string>///check if our timer is up; from boss collision
-vspeed = 0
-hspeed = 0
+hspeed = 0;
 </string>
           </argument>
         </arguments>

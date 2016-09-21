@@ -28,8 +28,8 @@
             <string>///Init powerup timer
 magaHatTimer = 120;
 //We increase the jumpspeed or the movespeed
-magaHatJumpspeed = 10;
-magaHatMovespeed = 6;
+magaHatJumpspeed = 8;
+magaHatMovespeed = 4;
 </string>
           </argument>
         </arguments>

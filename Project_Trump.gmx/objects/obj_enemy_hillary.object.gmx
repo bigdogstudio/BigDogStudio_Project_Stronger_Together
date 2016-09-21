@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>///Init Vars
-enemySpeed  = 3;
+enemySpeed  = 2;
 enemyDamage = 15;
 attackRange = 6;
 agroRange = 100;
@@ -215,16 +215,16 @@ if(collision_rectangle(x-14,y+1,x+14,y+15,obj_donald,false,false))
     {
         obj_donald.hp = scr_cause_damage(obj_donald.hp,enemyDamage);
         //this is how long until donald stops moving, can put all of this around 9 == -1
-        other.alarm[9] = 40;
+        other.alarm[9] = 20;
         if (other.hsp &gt; 0)
         {
-            other.hspeed += 2;
+            other.hspeed += 5;
         }
         else
         {
-            other.hspeed -= 2;
+            other.hspeed -= 5;
         }
-        other.vspeed -= 2;
+        other.y -= 80;
     }
 }
 else if (collision_rectangle(x-15,y-3,x+15,y-17,obj_donald,false,false)) //Donald hits our head
@@ -236,17 +236,17 @@ else if (collision_rectangle(x-15,y-3,x+15,y-17,obj_donald,false,false)) //Donal
         //instance_destroy();
          hp = scr_cause_damage(hp,obj_donald.damage);
         //this is how long until donald stops moving, can put all of this around 9 == -1
-        other.alarm[9] = 40;
+        other.alarm[9] = 20;
     
         if (other.hsp &gt; 0)
         {
-            other.hspeed += 2;
+            other.hspeed += 5;
         }
         else
         {
-            other.hspeed -= 2;
+            other.hspeed -= 5;
         }
-        other.vspeed -= 10;
+        other.y -= 80;
     }
 }
 </string>
