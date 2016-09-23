@@ -34,6 +34,8 @@ defJumpspeed = 6;
 defMovespeed = 3;
 jumpspeed = 6;
 movespeed = 3;
+collMovespeed = 0;
+collJumpspeed = 0;
 hp = 100;
 key_left = 0;
 key_right = 0;
@@ -68,7 +70,8 @@ instance_create(x,y,obj_view);
           <argument>
             <kind>1</kind>
             <string>///check if our timer is up; from boss collision
-hspeed = 0;
+collMovespeed = 0;
+collJumpspeed = 0;
 </string>
           </argument>
         </arguments>
@@ -173,7 +176,7 @@ if (place_meeting(x,y+vsp, obj_wall))
     }
     vsp = 0;
 }
-y += vsp;
+y += vsp + collJumpspeed;
 depth = -y + 1;
 
 //Horizontal Collision
@@ -187,7 +190,7 @@ if (place_meeting(x+hsp,y, obj_wall))
     }
     hsp = 0;
 }
-x += hsp;
+x += hsp + collMovespeed;
 
 ///Control our Hat and Weapons
 if (global.powerUpHat == true)
