@@ -32,15 +32,18 @@ attackRange = 6;
 agroRange = 100;
 hp = 100;
 image_speed = 0.1;
-//set state to still
-moving    = false;
-still     = true;
-moveLeft  = false;
-moveRight = true;
-timeToMoving = 40;
-timeToStill  = 60;
-timeToChangeDir = 20;
+moveLeft  = 0;
+moveRight = 1;
+jump  = 0;
+timeToJump = 40;
 moveLeftRightSet = false;
+movespeed = 3;
+jumpspeed = 6;
+collJumpspeed = 0;
+collMovespeed = 0;
+vsp = 0;
+hsp = 0;
+grav = 0.2;
 scr_enemy_hillary_state();
 </string>
           </argument>
@@ -90,7 +93,7 @@ hspeed = 0
           <argument>
             <kind>1</kind>
             <string>///Our left or right script
-moveLeftRightSet = false;
+/*moveLeftRightSet = false;
 speed = 0;
 if (moveLeft)
 {
@@ -101,7 +104,7 @@ else if (moveRight)
 {
     moveLeft = true;
     moveRight = false;
-}
+}*/
 </string>
           </argument>
         </arguments>
@@ -125,16 +128,7 @@ else if (moveRight)
           <argument>
             <kind>1</kind>
             <string>///our moving or still script
-if (moving)
-{
-    moving = false;
-    still  = true;
-}
-else if(still)
-{
-    moving = true;
-    still  = false;
-}
+jump = 1;
 
 </string>
           </argument>
@@ -216,6 +210,9 @@ if(collision_rectangle(x-14,y+1,x+14,y+15,obj_donald,false,false))
         obj_donald.hp = scr_cause_damage(obj_donald.hp,enemyDamage);
         //this is how long until donald stops moving, can put all of this around 9 == -1
         other.alarm[9] = 20;
+        //Check if donald is to the right of hill
+        //if he is move him to the right,
+        //else move him left
         if (other.x &gt; x)
         {
             other.collMovespeed += 3;
@@ -224,6 +221,7 @@ if(collision_rectangle(x-14,y+1,x+14,y+15,obj_donald,false,false))
         {
             other.collMovespeed -= 3;
         }
+        //tell donald to move up
         other.collJumpspeed -= 6;
     }
 }
@@ -237,7 +235,8 @@ else if (collision_rectangle(x-15,y-3,x+15,y-17,obj_donald,false,false)) //Donal
          hp = scr_cause_damage(hp,obj_donald.damage);
         //this is how long until donald stops moving, can put all of this around 9 == -1
         other.alarm[9] = 20;
-    
+        //check if donald is move left or right
+        //help him move in the dir hes moving
         if (other.hsp &gt; 0)
         {
             other.collMovespeed += 4;
@@ -246,6 +245,7 @@ else if (collision_rectangle(x-15,y-3,x+15,y-17,obj_donald,false,false)) //Donal
         {
             other.collMovespeed -= 4;
         }
+        //help donald get in the air after hitting hills head.
         other.collJumpspeed -= 12;
     }
 }
