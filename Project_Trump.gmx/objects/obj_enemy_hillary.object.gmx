@@ -215,14 +215,14 @@ if(collision_rectangle(x-14,y+1,x+14,y+15,obj_donald,false,false))
         //else move him left
         if (other.x &gt; x)
         {
-            other.collMovespeed += 3;
+            other.collMovespeed = +3;
         }
         else
         {
-            other.collMovespeed -= 3;
+            other.collMovespeed = -3;
         }
         //tell donald to move up
-        other.collJumpspeed -= 6;
+        other.collJumpspeed = -6;
     }
 }
 else if (collision_rectangle(x-15,y-3,x+15,y-17,obj_donald,false,false)) //Donald hits our head
@@ -239,14 +239,14 @@ else if (collision_rectangle(x-15,y-3,x+15,y-17,obj_donald,false,false)) //Donal
         //help him move in the dir hes moving
         if (other.hsp &gt; 0)
         {
-            other.collMovespeed += 4;
+            other.collMovespeed = +4;
         }
         else
         {
-            other.collMovespeed -= 4;
+            other.collMovespeed = -4;
         }
         //help donald get in the air after hitting hills head.
-        other.collJumpspeed -= 12;
+        other.collJumpspeed = -12;
     }
 }
 </string>

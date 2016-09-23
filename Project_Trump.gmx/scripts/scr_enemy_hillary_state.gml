@@ -34,14 +34,14 @@ if (distance_to_object(obj_donald) < agroRange) //We are close enough to engage 
             //reg move animation
             move = moveLeft + moveRight; //key_left is neg so we can add these to get net direction
             hsp  = move * movespeed;
-            /*if (vsp < 10)
+            if (vsp < 10)
             {
-                 vsp += grav;
-            }*/
+                vsp += grav;
+            }
             //Checking that we are against a wall, only going to jump against walls
             //Will need to this if adding platforms or make the second wall child?
             //May work
-            /*if (place_meeting(x,y+1,obj_wall))
+            if (place_meeting(x,y+1,obj_wall))
             {
                  vsp = jump * -jumpspeed; //Our jumpspeed is pos, but neg moves up
                 //play jump sound
@@ -51,23 +51,28 @@ if (distance_to_object(obj_donald) < agroRange) //We are close enough to engage 
                     sound_volume(snd_jump_sound, 0.5);
                     audio_play_sound(snd_jump_sound,0,0);
                 }
-            }*/
-            /*if (place_meeting(x,y+vsp, obj_wall))
-            // && vsp != 0)
-            {
+            }
+            
+            if (place_meeting(x,y+vsp, obj_wall))
+            {   
+                var counter = 0;
                 while (place_meeting(x,y+sign(vsp), obj_wall))
                 {
-                     vsp -= sign(vsp);
+                     y -= sign(vsp);
+                     counter += 1;
+                     if (counter > 5)
+                     {
+                        x -= sign(hsp);
+                     }
                 }
                 vsp = 0;
-            }*/
+            }
             y += vsp + collJumpspeed;
             depth = -y + 1;
 
             //Horizontal Collision
 
             if (place_meeting(x+hsp,y, obj_wall))
-            // && hsp != 0)
             {
                 while (place_meeting(x+sign(hsp),y,obj_wall))
                 {

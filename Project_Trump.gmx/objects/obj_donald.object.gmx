@@ -144,11 +144,11 @@ if (keyboard_check(vk_nokey))
 //Set our movement
 move = key_left + key_right; //key_left is neg so we can add these to get net direction
 hsp  = move * movespeed;
+
 if (vsp &lt; 10)
 {
     vsp += grav;
 }
-
 //Checking that we are against a wall, only going to jump against walls
 //Will need to this if adding platforms or make the second wall child?
 //May work
@@ -166,13 +166,17 @@ if (place_meeting(x,y+1,obj_wall))
 
 
 //
-
 if (place_meeting(x,y+vsp, obj_wall))
-// &amp;&amp; vsp != 0)
 {
+    var counter = 0;
     while (place_meeting(x,y+sign(vsp), obj_wall))
     {
-        vsp -= sign(vsp);
+        y -= sign(vsp);
+        counter +=1;
+        if (counter &gt;5)
+        {
+            x -= sign(hsp);
+        }
     }
     vsp = 0;
 }
@@ -182,7 +186,6 @@ depth = -y + 1;
 //Horizontal Collision
 
 if (place_meeting(x+hsp,y, obj_wall))
-// &amp;&amp; hsp != 0)
 {
     while (place_meeting(x+sign(hsp),y,obj_wall))
     {
