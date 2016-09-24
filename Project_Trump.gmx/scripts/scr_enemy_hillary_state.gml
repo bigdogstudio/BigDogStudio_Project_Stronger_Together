@@ -3,9 +3,10 @@
 //set timers
 if (distance_to_object(obj_donald) < agroRange) //We are close enough to engage donald
     {
+    
         sprite_index = spr_enemy_hillary_ani;
         //very close to donald attack
-        if (distance_to_point(obj_donald.x,y) < attackRange)
+        if (distance_to_point(obj_donald.x,obj_donald.y) < attackRange)
         {
             speed = 0;
             //attack animation;
@@ -34,6 +35,7 @@ if (distance_to_object(obj_donald) < agroRange) //We are close enough to engage 
             //reg move animation
             move = moveLeft + moveRight; //key_left is neg so we can add these to get net direction
             hsp  = move * movespeed;
+            
             if (vsp < 10)
             {
                 vsp += grav;

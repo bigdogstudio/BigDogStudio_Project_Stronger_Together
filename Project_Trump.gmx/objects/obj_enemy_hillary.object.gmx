@@ -44,6 +44,7 @@ collMovespeed = 0;
 vsp = 0;
 hsp = 0;
 grav = 0.2;
+depth = -y;
 scr_enemy_hillary_state();
 </string>
           </argument>
